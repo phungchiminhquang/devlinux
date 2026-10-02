@@ -2,19 +2,19 @@
 #include <stdio.h>
 
 int main(void){
-    int salary, tax_rate, tax_amount, net_salary;
+    float salary, tax_rate, tax_amount, net_salary;
     
     printf("Nhập lương brutto: ");
-    scanf("%d",&salary);
+    scanf("%f",&salary);
 
     printf("Nhập tỉ lệ thuế (%%): ");
-    scanf("%d",&tax_rate);
+    scanf("%f",&tax_rate);
 
     tax_amount = salary*tax_rate/100;
-    printf("Tiền thuế: %d\n",tax_amount);
+    printf("Tiền thuế: %.2f\n",tax_amount);
 
     net_salary = salary - tax_amount;
-    printf("Lương ròng: %d\n",net_salary);
+    printf("Lương ròng: %.2f\n",net_salary);
 
     return 0;
 }
