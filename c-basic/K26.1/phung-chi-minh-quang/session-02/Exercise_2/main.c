@@ -1,14 +1,15 @@
+// Exercise_2: Tính diện tích hình chữ nhật
 #include <stdio.h>
 
 int main(void){
-    float dai, rong;
+    float length, width;
 
     printf("Nhập chiều dài: ");
-    scanf("%f",&dai);
+    scanf("%f",&length);
 
     printf("Nhập chiều rộng: ");
-    scanf("%f",&rong);
+    scanf("%f",&width);
 
-    printf("Diện tích: %.2f\n",dai * rong);
+    printf("Diện tích: %.2f\n",length * width);
     return 0;
 }

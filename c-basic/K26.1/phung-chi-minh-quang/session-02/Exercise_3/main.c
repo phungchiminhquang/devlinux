@@ -1,3 +1,4 @@
+//Exercise_3: Chuyển đổi độ Celsius sang độ Fahrenheit
 #include <stdio.h>
 
 int main(void){

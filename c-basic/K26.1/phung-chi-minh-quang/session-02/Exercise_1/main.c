@@ -1,3 +1,4 @@
+//Exercise_1: Tính tổng 2 số nguyên
 #include <stdio.h>
 
 

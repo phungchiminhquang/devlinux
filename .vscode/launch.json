@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/minhquang/Documents/C-Basic/devlinux/c-basic/K26.1/phung-chi-minh-quang/session-02/Exercise_1",
+      "program": "/Users/minhquang/Documents/C-Basic/devlinux/c-basic/K26.1/phung-chi-minh-quang/session-02/Exercise_1/build/Debug/outDebug"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
+//Exercise_7: Tính tiền VAT và tổng tiền
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int price, vat_rate;
 
     printf("Nhập giá hàng: ");

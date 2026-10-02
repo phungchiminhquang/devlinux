@@ -1,21 +1,20 @@
+//Exercise_6: Tính lương ròng sau thuế
 #include <stdio.h>
 
 int main(void){
-    int luong,tl_thue;
-    int tien_thue;
-    int luong_rong;
+    int salary, tax_rate, tax_amount, net_salary;
     
     printf("Nhập lương brutto: ");
-    scanf("%d",&luong);
+    scanf("%d",&salary);
 
     printf("Nhập tỉ lệ thuế (%%): ");
-    scanf("%d",&tl_thue);
+    scanf("%d",&tax_rate);
 
-    tien_thue = luong*tl_thue/100;
-    printf("Tiền thuế: %d\n",tien_thue);
+    tax_amount = salary*tax_rate/100;
+    printf("Tiền thuế: %d\n",tax_amount);
 
-    luong_rong = luong - tien_thue;
-    printf("Lương ròng: %d\n",luong_rong);
+    net_salary = salary - tax_amount;
+    printf("Lương ròng: %d\n",net_salary);
 
     return 0;
 }

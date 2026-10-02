@@ -1,24 +1,25 @@
+//Exercise_10: Tính tiền lãi và tổng tiền
 #include <stdio.h>
 
 int main(void){
-    int tien_goc,lai_suat, so_nam ;
-    int tien_lai;
-    int tong_tien;
+    float tien_goc,lai_suat, so_nam ;
+    float tien_lai;
+    float tong_tien;
     
     printf("Nhập tiền gốc: ");
-    scanf("%d",&tien_goc);
+    scanf("%f",&tien_goc);
 
     printf("Nhập lãi suất (%%): ");
-    scanf("%d",&lai_suat);
+    scanf("%f",&lai_suat);
 
     printf("Nhập số năm: ");
-    scanf("%d",&so_nam);
+    scanf("%f",&so_nam);
 
     tien_lai = tien_goc*lai_suat*so_nam/100;
-    printf("Tiền lãi: %d\n",tien_lai);
+    printf("Tiền lãi: %.2f\n",tien_lai);
 
     tong_tien = tien_goc + tien_lai;
-    printf("Tổng tiền: %d\n",tong_tien);
+    printf("Tổng tiền: %.2f\n",tong_tien);
 
     return 0;
 }
