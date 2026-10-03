@@ -1,13 +1,4 @@
-/*Xác định số ngày trong tháng
-
-Viết chương trình C:
-
-Nhập vào tháng (1–12)
-In ra số ngày của tháng đó
-Tháng 1, 3, 5, 7, 8, 10, 12: 31 ngày
-Tháng 4, 6, 9, 11: 30 ngày
-Tháng 2: 28 ngày (không xét năm nhuận)
-Nếu nhập sai → in lỗi*/
+/*Xác định số ngày trong tháng*/
 
 #include <stdio.h>
 

@@ -1,3 +1,4 @@
+/*Xác định giá vé*/
 #include <stdio.h>
 #define NGAY_THUONG 1
 #define NGAY_LE 2

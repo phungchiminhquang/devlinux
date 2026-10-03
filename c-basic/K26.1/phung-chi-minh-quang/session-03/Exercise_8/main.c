@@ -1,3 +1,4 @@
+/*Máy tính đơn giản*/
 #include <stdio.h>
 
 int main(void)

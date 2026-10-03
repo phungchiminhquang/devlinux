@@ -1,3 +1,4 @@
+/*Xác định loại tam giác*/
 #include <stdio.h>
 
 int main(void)

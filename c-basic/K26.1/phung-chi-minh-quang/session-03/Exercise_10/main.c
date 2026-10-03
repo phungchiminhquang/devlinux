@@ -1,3 +1,4 @@
+/*Xác định giá điện*/
 #include <stdio.h>
 
 #define HO_THUONG 1
