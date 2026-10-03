@@ -5,7 +5,15 @@ int main(void){
     int diem;
 
     printf("Nhập điểm số (0-100): ");
-    scanf("%d", &diem);
+    if (scanf("%d", &diem) != 1) {
+        printf("Lỗi: Vui lòng nhập một số nguyên.\n");
+        return 1;
+    }
+
+    if (diem < 0 || diem > 100) {
+        printf("Lỗi: Điểm số phải nằm trong khoảng 0-100.\n");
+        return 1;
+    }
 
     if (diem >= 90) {
         printf("Xếp loại: Xuất sắc\n");

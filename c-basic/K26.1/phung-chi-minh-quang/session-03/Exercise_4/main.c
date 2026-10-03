@@ -5,7 +5,15 @@ int main(void){
     int tuoi;
 
     printf("Nhập tuổi: ");
-    scanf("%d", &tuoi);
+    if (scanf("%d", &tuoi) != 1) {
+        printf("Lỗi: Vui lòng nhập một số nguyên.\n");
+        return 1;
+    }
+
+    if(tuoi < 0) {
+        printf("Lỗi: Tuổi không thể là số âm.\n");
+        return 1;
+    }
 
     if (tuoi >= 18) {
         printf("Bạn đủ điều kiện thi bằng lái xe máy\n");

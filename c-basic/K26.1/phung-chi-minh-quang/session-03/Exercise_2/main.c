@@ -4,7 +4,11 @@
 int main(void){
     int n;
     printf("Nhập số: ");
-    scanf("%d",&n);
+    
+    if (scanf("%d", &n) != 1) {
+        printf("Lỗi: Vui lòng nhập một số nguyên.\n");
+        return 1;
+    }
 
     if(n > 0){
         printf("%d là số dương\n",n);

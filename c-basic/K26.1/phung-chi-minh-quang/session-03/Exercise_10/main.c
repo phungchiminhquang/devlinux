@@ -20,10 +20,16 @@ int main(void)
     int gia_tien;
 
     printf("Nhập số kWh: ");
-    scanf("%d", &kWh);
+    if (scanf("%d", &kWh) != 1) {
+        printf("Lỗi: Vui lòng nhập một số nguyên.\n");
+        return 1;
+    }
 
     printf("Nhập loại hộ (1=Thường, 2=Chính sách): ");
-    scanf("%d", &loai_ho);
+    if (scanf("%d", &loai_ho) != 1) {
+        printf("Lỗi: Vui lòng nhập một số nguyên.\n");
+        return 1;
+    }
 
     // Kiểm tra input
     if (kWh < 0 || (loai_ho != HO_THUONG && loai_ho != HO_CHINH_SACH))
@@ -34,10 +40,10 @@ int main(void)
 
     // Tính số tiền từng bậc
 
-    bac1 = min(kWh, 50) * GIA_DIEN_BAC_1;
-    bac2 = max(0, min(kWh, 100) - 50) * GIA_DIEN_BAC_2;
-    bac3 = max(0, min(kWh, 200) - 100) * GIA_DIEN_BAC_3;
-    bac4 = max(0, kWh - 200) * GIA_DIEN_BAC_4;
+    bac1 = min(kWh, 50) * GIA_DIEN_BAC_1;// Bậc 1: 0-50 kWh
+    bac2 = max(0, min(kWh, 100) - 50) * GIA_DIEN_BAC_2;// Bậc 2: 51-100 kWh
+    bac3 = max(0, min(kWh, 200) - 100) * GIA_DIEN_BAC_3;// Bậc 3: 101-200 kWh
+    bac4 = max(0, kWh - 200) * GIA_DIEN_BAC_4;// Bậc 4: Trên 200 kWh
 
     gia_tien = bac1 + bac2 + bac3 + bac4;
 

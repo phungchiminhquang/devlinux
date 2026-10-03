@@ -7,13 +7,25 @@ int main(void)
     char c;
 
     printf("Nhập số 1: ");
-    scanf("%f", &a);
+    if (scanf("%f", &a) != 1)
+    {
+        printf("Lỗi: Vui lòng nhập một số hợp lệ.\n");
+        return 1;
+    }
 
     printf("Nhập toán tử: ");
-    scanf(" %c", &c); // Khoảng trắng trước %c ra lệnh cho scanf tự động bỏ qua các kí tự đặc biệt như space hoặc kí tự \n từ nút Enter
+    if (scanf(" %c", &c) != 1)
+    {
+        printf("Lỗi: Vui lòng nhập một toán tử hợp lệ.\n");
+        return 1;
+    }
 
     printf("Nhập số 2: ");
-    scanf("%f", &b);
+    if (scanf("%f", &b) != 1)
+    {
+        printf("Lỗi: Vui lòng nhập một số hợp lệ.\n");
+        return 1;
+    }
 
     // Để giữ sự đơn giản thì ở đây không check "khoảng trắng trong nhập liệu" hoặc chia cho 0
 

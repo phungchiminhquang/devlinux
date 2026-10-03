@@ -6,7 +6,15 @@ int main(void){
     int thu;
 
     printf("Nhập số tương ứng với thứ trong tuần (1-7): ");
-    scanf("%d", &thu);
+    if (scanf("%d", &thu) != 1) {
+        printf("Lỗi: Vui lòng nhập một số nguyên.\n");
+        return 1;
+    }
+
+    if (thu < 1 || thu > 7) {
+        printf("Lỗi: Số nhập vào không hợp lệ. Vui lòng nhập số từ 1 đến 7.\n");
+        return 1;
+    }
 
     switch(thu) {
         case 1:

@@ -15,10 +15,24 @@ int main(void)
     int gia_ve = GIA_VE_BASE;
 
     printf("Nhập loại hành khách (1=Trẻ em, 2=Người lớn, 3=Người già): ");
-    scanf("%d", &loai_khach);
+    if (scanf("%d", &loai_khach) != 1)
+    {
+        printf("Lỗi: Vui lòng nhập một số hợp lệ.\n");
+        return 1;
+    }
 
     printf("Nhập loại ngày (1=Thường, 2=Lễ): ");
-    scanf("%d", &loai_ngay);
+    if (scanf("%d", &loai_ngay) != 1)
+    {
+        printf("Lỗi: Vui lòng nhập một số hợp lệ.\n");
+        return 1;
+    }
+
+    if (loai_khach < TRE_EM || loai_khach > NGUOI_GIA || (loai_ngay != NGAY_THUONG && loai_ngay != NGAY_LE))
+    {
+        printf("Lỗi: Dữ liệu nhập không hợp lệ\n");
+        return 1;
+    }
 
     // Kiểm tra loai_ngay để tính gia_ve
     if (loai_ngay == NGAY_LE)
@@ -40,7 +54,7 @@ int main(void)
         break;
     default:
         printf("Lỗi: Loại hành khách không hợp lệ\n");
-        return 0;
+        return 1;
         break;
     }
 

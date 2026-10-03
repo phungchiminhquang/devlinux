@@ -23,7 +23,7 @@ int main(void)
     // Đặt flag kiểm tra tam giác đều/cân/vuông
     int is_deu = (a == b && a == c);
     int is_can = (a == b || a == c || b == c);
-    int is_vuong = (a * a + b * b == c * c) || (a * a + c * c == b * b) || (b * b + c * c == a * a);
+    int is_vuong = (a*a + b*b == c*c) || (a*a + c*c == b*b) || (b*b + c*c == a*a);
 
     // Phân loại tam giác
     if (is_deu)
