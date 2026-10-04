@@ -59,7 +59,7 @@ int main(void)
             break;
         default:
             printf("Lỗi: Toán tử sai\n");
-            return 1;
+            break;
         }
 
         //Cho phép người dùng tiếp tục hoặc thoát chương trình

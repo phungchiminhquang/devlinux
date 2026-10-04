@@ -23,7 +23,7 @@ int main(void)
 
         if (money % 50000 != 0 || money <= 0)
         {
-            printf("Số tiền phải lớn hơn 0 và phải chia hết cho 50000");
+            printf("Số tiền phải lớn hơn 0 và phải chia hết cho 50000\n");
             continue;
             ;
         }
