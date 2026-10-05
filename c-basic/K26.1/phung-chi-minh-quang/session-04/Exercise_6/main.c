@@ -58,7 +58,7 @@ int main(void)
             printf("Kết quả: %d\n", a % b);
             break;
         default:
-            printf("Lỗi: Toán tử sai\n");
+            printf("Toán tử sai\n");
             break;
         }
 

@@ -11,6 +11,12 @@ int main(void)
     if (scanf("%d", &n) != 1)
     {
         printf("Lỗi: Dữ liệu nhập sai\n");
+        return 1;
+    }
+    if (n < 0)
+    {
+        printf("Lỗi: Vui lòng nhập số nguyên dương\n");
+        return 1;
     }
 
     printf("Số ban đầu: %d\n", n);
