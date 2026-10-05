@@ -6,7 +6,7 @@ void factorize(int n)
     printf("Các thừa số nguyên tố: ");
 
     // Tuân theo nguyên tắc tìm thừa số từ các ước bé nhất, dừng khi i*i > n
-    // int i = 2; Bắt đầu vòng lặp xét từng số từ ước bằng 2, cũng là số nguyên tố bé nhất
+    // Bắt đầu vòng lặp xét từng số từ ước bằng 2, cũng là số nguyên tố bé nhất
     for (int i = 2; i * i <= n;)
     {
         if (n % i == 0)

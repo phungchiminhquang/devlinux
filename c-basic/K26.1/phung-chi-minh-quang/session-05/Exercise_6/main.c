@@ -26,7 +26,7 @@ int main(void)
         printf("Lỗi: Vui lòng nhập số nguyên dương\n");
         return 1;
     }
-    printf("Tổng các chữ số : %d\n", sumDigits(n));
+    printf("Tổng các chữ số: %d\n", sumDigits(n));
 
 
     return 0;

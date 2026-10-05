@@ -1,6 +1,8 @@
-//Hàm số Fibonacci
+// Hàm số Fibonacci
 #include <stdio.h>
 
+// Lưu ý: Thuật toán recursive này có độ phức tạp O(2^n) → khác slow với n lớn.
+// Cải thiện: sử dụng vòng lặp (iterative) hoặc memoization
 int fibonacci(int n)
 {
     if (n == 1)
@@ -10,7 +12,6 @@ int fibonacci(int n)
     else
         return fibonacci(n - 1) + fibonacci(n - 2);
 }
-
 
 int main(void)
 {
@@ -27,7 +28,7 @@ int main(void)
         return 1;
     }
 
-    //In dãy Fibonacci từ 1 -> n bằng cách gọi hàm fibonacci() n lần
+    // In dãy Fibonacci từ 1 -> n bằng cách gọi hàm fibonacci() n lần
     printf("Dãy Fibonacci: ");
     for (int i = 1; i <= n; i++)
     {

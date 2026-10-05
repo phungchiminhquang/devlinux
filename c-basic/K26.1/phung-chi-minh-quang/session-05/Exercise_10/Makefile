@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra
 all: main
 
 main: main.c
-	$(CC) $(CFLAGS) -o main main.c
+	$(CC) $(CFLAGS) -o main main.c -lm
 
 # Target dọn dẹp file thực thi sau khi build
 clean:
