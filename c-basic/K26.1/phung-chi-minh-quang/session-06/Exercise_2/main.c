@@ -35,6 +35,14 @@ int main(void){
             min_pos = i;
         }
     }
+    //In mảng ban đầu
+    printf("Mảng ban đầu: ");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", elements[i]);
+    }
+    printf("\n");
+    
     printf("Phần tử lớn nhất: %d (vị trí %d)\n", elements[max_pos], max_pos);
     printf("Phần tử nhỏ nhất: %d (vị trí %d)\n", elements[min_pos], min_pos);
     return 0;

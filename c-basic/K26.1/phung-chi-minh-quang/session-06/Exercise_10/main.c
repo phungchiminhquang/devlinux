@@ -31,7 +31,7 @@ int main(void)
 
     int top = 0, bottom = n - 1, left = 0, right = n - 1;
 
-    printf("Xoắn ốc:");
+    printf("Xoắn ốc:\n");
     while (top <= bottom && left <= right)
     {
         // 1. from left to right at the top row
