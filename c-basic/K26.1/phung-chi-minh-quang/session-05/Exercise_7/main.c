@@ -24,7 +24,7 @@ void factorize(int n)
 
         if (i * i > n && n > 1) // Nếu i*i > n và n vẫn còn lớn hơn 1, thì n là một thừa số nguyên tố
         {
-            printf("%d\n", n);
+            printf("%d", n);
             break;
         }
     }
@@ -36,7 +36,21 @@ int main(void)
     int n;
 
     printf("Nhập số: ");
-    scanf("%d", &n);
+    if (scanf("%d", &n) != 1)
+    {
+        printf("Lỗi: Dữ liệu nhập sai\n");
+        return 1;
+    }
+    if (n <= 0)
+    {
+        printf("Lỗi: Vui lòng nhập số nguyên dương\n");
+        return 1;
+    }
+    if(n<2)
+    {
+        printf("Lỗi: Số phải >= 2 để có thừa số nguyên tố\n");
+        return 1;
+    }
 
     factorize(n);
 

@@ -1,4 +1,5 @@
 //Hàm kiểm tra số nguyên tố
+
 #include <stdio.h>
 
 int is_prime(int n)

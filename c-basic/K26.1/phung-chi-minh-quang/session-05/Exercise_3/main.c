@@ -22,10 +22,24 @@ int main(void)
     int a, b;
 
     printf("Nhập số a: ");
-    scanf("%d", &a);
+    if (scanf("%d", &a) != 1)
+    {
+        printf("Lỗi: Dữ liệu nhập sai\n");
+        return 1;
+    }
 
     printf("Nhập số b: ");
-    scanf("%d", &b);
+    if (scanf("%d", &b) != 1)
+    {
+        printf("Lỗi: Dữ liệu nhập sai\n");
+        return 1;
+    }
+
+    if (a <= 0 || b <= 0)
+    {
+        printf("Lỗi: Vui lòng nhập số nguyên dương\n");
+        return 1;
+    }
 
     printf("UCLN(%d, %d) = %d\n", a, b, gcd(a, b));
     printf("BCNN(%d, %d) = %d\n", a, b, lcm(a, b));

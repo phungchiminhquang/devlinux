@@ -11,26 +11,26 @@ int length(int n)
     return count;
 }
 
-// int pow(int base, int exp)
-// {
-//     int result = 1;
-//     for (int i = 0; i < exp; i++)
-//     {
-//         result *= base;
-//     }
-//     return result;
-// }
+int int_pow(int base, int exp)
+{
+    int result = 1;
+    for (int i = 0; i < exp; i++)
+    {
+        result *= base;
+    }
+    return result;
+}
 
 int isArmstrong(int n)
 {
     int len = length(n);
-    double sum = 0;
+    int sum = 0;
     int original = n;
 
     while (n > 0)
     {
         int digit = n % 10;
-        sum += pow(digit, len);
+        sum += int_pow(digit, len);
         n /= 10;
     }
     return sum == original;

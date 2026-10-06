@@ -1,16 +1,23 @@
 // Hàm số Fibonacci
 #include <stdio.h>
 
-// Lưu ý: Thuật toán recursive này có độ phức tạp O(2^n) → khác slow với n lớn.
+// Lưu ý: Thuật toán recursive có độ phức tạp O(2^n) → khác slow với n lớn.
 // Cải thiện: sử dụng vòng lặp (iterative) hoặc memoization
 int fibonacci(int n)
 {
     if (n == 1)
         return 0;
-    else if (n == 2)
+    if (n == 2)
         return 1;
-    else
-        return fibonacci(n - 1) + fibonacci(n - 2);
+
+    int a = 0, b = 1;
+    for (int i = 3; i <= n; i++)
+    {
+        int next = a + b;
+        a = b;
+        b = next;
+    }
+    return b;
 }
 
 int main(void)

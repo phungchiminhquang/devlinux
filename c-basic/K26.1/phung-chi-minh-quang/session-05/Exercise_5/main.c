@@ -9,7 +9,7 @@ int isPalindrome(int n)
 
     while (n > 0)
     {
-        reversed = reversed * 10 + n % 10;
+        reversed = reversed * 10 + n % 10; //Xây dựng số đảo ngược
         n /= 10;
     }
 
