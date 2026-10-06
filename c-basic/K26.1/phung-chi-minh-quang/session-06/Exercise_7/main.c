@@ -1,4 +1,4 @@
-
+//Tính tổng tất cả, tổng từng hàng, tổng từng cột của ma trận m x n
 #include <stdio.h>
 
 int main(void)

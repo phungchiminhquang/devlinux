@@ -28,7 +28,11 @@ int main(void){
 
     int x;
     printf("Nhập số cần tìm: ");
-    scanf("%d", &x);
+    if (scanf("%d", &x) != 1)
+    {
+        printf("Lỗi nhập liệu!\n");
+        return 1;
+    }
 
     int count = 0;
     for (int i = 0; i < n; i++)

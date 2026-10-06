@@ -6,18 +6,34 @@ int main(void){
     int target_el;
 
     printf("Nhập số lượng phần tử: ");
-    scanf("%d",&n);
+    if (scanf("%d", &n) != 1)
+    {
+        printf("Lỗi nhập liệu!\n");
+        return 1;
+    }
+    if(n <= 0){
+        printf("Lỗi: Vui lòng nhập số nguyên dương\n");
+        return 1;
+    }
 
     //Khởi tạo array sau khi nhập
     int n_array[n];
 
     printf("Nhập %d phần tử: ",n);
     for(int i = 0; i<n; i++){
-        scanf("%d",&n_array[i]);
+        if (scanf("%d", &n_array[i]) != 1)
+        {
+            printf("Lỗi nhập liệu!\n");
+            return 1;
+        }
     }
 
     printf("Nhập số cần xóa: ");
-    scanf("%d",&target_el);
+    if (scanf("%d", &target_el) != 1)
+    {
+        printf("Lỗi nhập liệu!\n");
+        return 1;
+    }
 
     printf("Mảng ban đầu: ");
     for (int i = 0; i < n; i++)
