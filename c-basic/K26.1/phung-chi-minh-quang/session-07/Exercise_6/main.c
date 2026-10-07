@@ -17,23 +17,33 @@
 
 #include <stdio.h>
 
-int isPrime(int num){
-    for (int i = 2; i*i <= num; i++)
+int isPrime(int num)
+{
+    if (num <= 1)
+    { // Nếu số nguyên tố nhỏ hơn 1, thì không phải là số nguyên tố
+        return 0;
+    }
+
+    for (int i = 2; i * i <= num; i++)
     {
-        if(num%i==0){
-            //num không phải số nguyên tố;
+        if (num % i == 0)
+        {
+            // num không phải số nguyên tố;
             return 0;
         }
     }
     return 1;
 }
 
-int countPrimes(int *arr, int n){
+int countPrimes(int *arr, int n)
+{
     int count = 0;
     int *p = arr;
 
-    for (int i = 0; i<n;i++){
-        if(isPrime(*p)){
+    for (int i = 0; i < n; i++)
+    {
+        if (isPrime(*p))
+        {
             count++;
         }
         p++;
@@ -68,7 +78,7 @@ int main(void)
         }
     }
 
-    printf("Số lượng số nguyên tố: %d\n",countPrimes(arr,n));
+    printf("Số lượng số nguyên tố: %d\n", countPrimes(arr, n));
 
     return 0;
 }

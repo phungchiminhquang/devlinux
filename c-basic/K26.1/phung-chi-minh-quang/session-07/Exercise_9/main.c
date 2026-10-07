@@ -43,14 +43,14 @@ int main(void)
 
     // Nhập từng kí tự cho đến khi gặp Enter (\n)
     printf("Nhập chuỗi: ");
-    for (int i = 0; i < STR_MAX_LENGTH; i++)
+    if (fgets(s, STR_MAX_LENGTH, stdin) != NULL)
     {
-        scanf("%c", &s[i]);
-        if (s[i] == '\n')
+        int len = length(s);
+
+        // Thay kí tự Enter \n bằng kí tự kết thúc chuỗi \0
+        if (len > 0 && s[len - 1] == '\n')
         {
-            // Thay kí tự Enter \n bằng kí tự kết thúc chuỗi \0
-            s[i] = '\0';
-            break;
+            s[len - 1] = '\0';
         }
     }
 
