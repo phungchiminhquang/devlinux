@@ -26,7 +26,12 @@
 void input(int *arr, int *n)
 {
     printf("Nhập số lượng phần tử: ");
-    scanf("%d", n);
+    
+    if (scanf("%d", n) != 1)
+    {
+        printf("Lỗi: Dữ liệu nhập sai\n");
+        return;
+    }
 
     // validate n value
     if (*n > ARRAY_MAX_LEN || *n <= 0)
